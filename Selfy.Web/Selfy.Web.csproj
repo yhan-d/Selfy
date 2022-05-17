@@ -13,9 +13,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Components\" />
-    <Folder Include="wwwroot\" />
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
 
 </Project>
