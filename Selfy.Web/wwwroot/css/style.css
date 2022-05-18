@@ -5,11 +5,11 @@ body {
     color: #666666;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    background: #ffffff;
+    background: #fff0f5;
 }
 
 a {
-    color: #3F69AA;
+    color: #cc0404;
     transition: 0.5s;
 }
 
@@ -40,7 +40,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #3F69AA;
+    background: #ffffff;
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -56,7 +56,7 @@ h6 {
 
 .back-to-top i {
     padding-top: 12px;
-    color: #ffffff;
+    color: #cc0404;
 }
 
 
@@ -105,7 +105,7 @@ button.btn {
 /**********************************/
 .top-header {
     padding: 15px 0;
-    background: #ffffff;
+    background: #whitesmoke;
 }
 
 .top-header .logo {
@@ -126,7 +126,7 @@ button.btn {
     height: 40px;
     padding: 0 15px;
     color: #666666;
-    border: 1px solid #3F69AA;
+    border: 1px solid #cc0404;
 }
 
 .top-header .search button {
@@ -138,11 +138,11 @@ button.btn {
     padding: 0 15px;
     border: none;
     background: none;
-    color: #3F69AA;
+    color: #cc0404;
 }
 
 .top-header .search button:hover {
-    background: #3F69AA;
+    background: #cc0404;
     color: #ffffff;
 }
 
@@ -1716,7 +1716,7 @@ button.btn {
 .footer-bottom {
     position: relative;
     padding: 25px 0;
-    background: #ffffff;
+    background: #fff0f5;
 }
 
 .footer-bottom .copyright {
