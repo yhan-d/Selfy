@@ -211,13 +211,13 @@ button.btn {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #f8f9fa;
+    background: #cc0404;
 }
 
 @media (min-width: 768px) {
     .header,
     .header .navbar {
-        background: #3F69AA !important;
+        background: #cc0404 !important;
     }
     
     .header .navbar-brand {
@@ -234,7 +234,7 @@ button.btn {
 @media (max-width: 768px) {   
     .header,
     .header .navbar {
-        background: #333333 !important;
+        background: #cc0404 !important;
     }
     
     .header a.nav-link {
@@ -1569,7 +1569,7 @@ button.btn {
 .footer {
     position: relative;
     padding: 60px 0 0 0;
-    background: #3F69AA;
+    background: #cc0404;
 }
 
 @media (min-width: 992px) {
