@@ -70,7 +70,7 @@ h6 {
     height: 35px;
     padding: 0 15px;
     color: #666666;
-    border: 1px solid #3F69AA;
+    border: 1px solid #cc0404;
     border-radius: 0;
     margin-bottom: 15px
 }
@@ -94,7 +94,7 @@ h6 {
 
 button.btn {
     color: #ffffff;
-    background: #3F69AA;
+    background: #cc0404;
     border-radius: 0;
 }
 
@@ -336,7 +336,7 @@ button.btn {
 .breadcrumb-wrap {
     position: relative;
     width: 100%;
-    background: #ffffff;
+    background: #fff0f5;
 }
 
 .breadcrumb-wrap .breadcrumb {
@@ -428,7 +428,7 @@ button.btn {
 .section-header h2,
 .section-header h3 {
     position: relative;
-    color: #3F69AA;
+    color: #cc0404;
     font-size: 35px;
     font-weight: 700;
     text-align: center;
@@ -444,7 +444,7 @@ button.btn {
     height: 5px;
     left: calc(50% - 25px);
     bottom: 0;
-    background: #3F69AA;
+    background: #cc0404;
 }
 
 .section-header p {
