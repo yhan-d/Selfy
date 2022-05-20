@@ -2,6 +2,8 @@
 using System.Net.Mail;
 using System.Text;
 using Microsoft.Extensions.Configuration;
+using Selfy.Core.Configurations;
+using Selfy.Core.Emails;
 
 namespace Selfy.Business.Services
 {

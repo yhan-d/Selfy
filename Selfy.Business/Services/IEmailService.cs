@@ -1,4 +1,6 @@
-﻿namespace Selfy.Business.Services
+﻿using Selfy.Core.Emails;
+
+namespace Selfy.Business.Services
 {
     public interface IEmailService
     {
