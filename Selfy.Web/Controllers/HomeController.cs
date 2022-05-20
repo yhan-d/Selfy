@@ -16,16 +16,9 @@ namespace Selfy.Web.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
-            addRoles();
+           
         }
 
-        public async void addRoles()
-        {
-            foreach (var role in Roles.RoleList)
-            {
-                await _roleManager.CreateAsync(new ApplicationRole(role));
-            }
-        }
         public IActionResult Index()
         {
             return View();
