@@ -12,7 +12,7 @@ using Selfy.Data.EntityFramework;
 namespace Selfy.Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20220520090018_Init")]
+    [Migration("20220520114006_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -138,10 +138,6 @@ namespace Selfy.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(120)
-                        .HasColumnType("nvarchar(120)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
