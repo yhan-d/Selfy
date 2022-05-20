@@ -12,7 +12,7 @@ using Selfy.Data.EntityFramework;
 namespace Selfy.Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20220520114006_Init")]
+    [Migration("20220520121807_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
