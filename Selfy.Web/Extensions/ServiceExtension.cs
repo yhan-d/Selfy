@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Selfy.Business.MappingProfiles;
-using Selfy.Business.Repositories;
-using Selfy.Business.Repositories.Abstracts;
-using Selfy.Business.Services.Email;
-using Selfy.Core.Entities;
+using Selfy.Business.Services;
 using Selfy.Data.EntityFramework;
 using Selfy.Data.Identity;
 
@@ -52,14 +48,14 @@ namespace Selfy.Web.Extensions
 
             services.AddTransient<IEmailService, SmtpEmailService>();
 
-            services.AddScoped<IRepository<Product, Guid>, ProductRepo>();
-            services.AddScoped<IRepository<Category, int>, CategoryRepo>();
+            //services.AddScoped<IRepository<Product, Guid>, ProductRepo>();
+            //services.AddScoped<IRepository<Category, int>, CategoryRepo>();
 
             //builder.Services.AddAutoMapper(options => options.AddMaps("AdminTemplate.MappingProfiles"));
-            services.AddAutoMapper(options =>
-            {
-                options.AddProfile<EntityMappingProfile>();
-            });
+            //services.AddAutoMapper(options =>
+            //{
+            //    options.AddProfile<EntityMappingProfile>();
+            //});
 
             return services;
         }

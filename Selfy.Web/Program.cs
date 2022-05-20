@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using Selfy.Data.EntityFramework;
+using Selfy.Web.Extensions;
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var con1 = builder.Configuration.GetConnectionString("con1");
+builder.Services.AddDbContext<MyContext>(options => options.UseSqlServer(con1));
+builder.Services.AddServices();
 
-builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
 
 var app = builder.Build();
 
