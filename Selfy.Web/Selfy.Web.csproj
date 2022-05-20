@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Components\" />
+    <Folder Include="ViewModels\Dashboard\" />
   </ItemGroup>
 
   <ItemGroup>
