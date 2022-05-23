@@ -1315,7 +1315,7 @@ button.btn {
 
 .my-account .nav.nav-pills .nav-link {
     padding: 15px 22px;
-    color: #3F69AA;
+    color: #cc0404;
     font-weight: 400;
     background: rgba(63, 105, 170, .1);
     border-radius: 0;
@@ -1325,7 +1325,7 @@ button.btn {
 .my-account .nav.nav-pills .nav-link:hover,
 .my-account .nav.nav-pills .nav-link.active {
     color: #ffffff;
-    background: #3F69AA;
+    background: #cc0404;
 }
 
 .my-account .tab-content {
@@ -1341,8 +1341,8 @@ button.btn {
 
 .my-account .tab-content .table .thead-dark th {
     text-align: center;
-    background: #3F69AA;
-    border-color: #3F69AA;
+    background: #cc0404;
+    border-color: #cc0404;
     vertical-align: middle;
 }
 
@@ -1358,7 +1358,7 @@ button.btn {
     padding: 2px 15px;
     text-align: center;
     color: #ffffff;
-    background: #3F69AA;
+    background: #cc0404;
     border: none;
 }
 
