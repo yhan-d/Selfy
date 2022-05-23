@@ -20,8 +20,8 @@
                             <div class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hesabım</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Giriş Yap</a>
-                                    <a href="#" class="dropdown-item">Kayıt Ol</a>
+                                    <a asp-controller="Account" asp-action="Login" class="dropdown-item">Giriş Yap</a>
+                                    <a asp-controller="Account" asp-action="Register" class="dropdown-item">Kayıt Ol</a>
                                 </div>
                             </div>
                             <div class="cart">
@@ -47,7 +47,7 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav m-auto">
-                            <a href="index.html" class="nav-item nav-link active">Ana Sayfa</a>
+                            <a asp-controller="Home" asp-action="Indexs" class="nav-item nav-link active">Ana Sayfa</a>
                             <a href="product-list.html" class="nav-item nav-link">Hakkımızda</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hizmetler</a>
