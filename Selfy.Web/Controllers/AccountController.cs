@@ -18,5 +18,8 @@ namespace Selfy.Web.Controllers
         [HttpGet]
         public IActionResult Register() { return View(); }
 
+        [HttpGet]
+        public IActionResult Profile() { return View(); }
+
     }
 }

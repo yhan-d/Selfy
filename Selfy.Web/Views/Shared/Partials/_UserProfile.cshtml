@@ -1,0 +1,33 @@
+﻿@using Selfy.Core.Identity;
+@using Microsoft.AspNetCore.Http;
+@using Selfy.Data.Identity
+
+@{
+    var userString = Context.Session.GetString("User") ?? "";
+
+    var user = new ApplicationUser();
+    if (userString != "")
+    {
+        user = System.Text.Json.JsonSerializer.Deserialize<ApplicationUser>(userString);
+    }
+}
+
+
+<div class="user-profile">
+    <div class="dropdown user-pro-body">
+        <div><img src="..\..\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
+        <div class="mb-2">
+            @if (Context.User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Account" asp-action="Profile" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">@user.Name @user.Surname</span> </a>
+
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Login" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Please LogIn</span> </a>
+
+            }
+            <br><span class="text-gray">Web Designer</span>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Dtos\" />
     <Folder Include="Entities\" />
+    <Folder Include="Role\" />
   </ItemGroup>
 
 </Project>
