@@ -15,7 +15,6 @@
 
 <div class="user-profile">
     <div class="dropdown user-pro-body">
-        <div><img src="..\..\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
         <div class="mb-2">
             @if (Context.User.Identity.IsAuthenticated)
             {
@@ -27,7 +26,6 @@
                 <a asp-controller="Account" asp-action="Login" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Please LogIn</span> </a>
 
             }
-            <br><span class="text-gray">Web Designer</span>
         </div>
     </div>
 </div>

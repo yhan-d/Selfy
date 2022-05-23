@@ -1,0 +1,34 @@
+﻿@using Selfy.Web.ViewModels
+@{
+    Layout = null;
+}
+
+@model LoginViewModel
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+    <partial name="Partials/_StylesMeta" />
+</head>
+<body>
+    <div class="login-img">
+        <div id="global-loader"></div>
+        <div class="page">
+            <div class="page-single">
+                <div class="container">
+                    <div class="row authentication">
+                        <div class="col col-login mx-auto">
+                            Hesap onaylama başarılı.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <partial name="Partials/_Scripts" />
+</body>
+</html>
