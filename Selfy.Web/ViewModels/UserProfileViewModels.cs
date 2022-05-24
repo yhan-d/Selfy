@@ -24,6 +24,12 @@ public class UserProfileViewModel
     [EmailAddress]
     public string Email { get; set; }
 
+    [Display(Name = "Telefon No")]
+    [Required(ErrorMessage = "Telefon alanı gereklidir.")]
+    [StringLength(10, MinimumLength = 10, ErrorMessage = "En fazla 10 karakter giriniz.")]
+    [DataType(DataType.PhoneNumber)]
+    [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Geçersiz Numara.")]
+    public string Phone { get; set; }
 
     public DateTime RegisterDate { get; set; }
 }

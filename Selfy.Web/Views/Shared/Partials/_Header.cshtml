@@ -1,66 +1,66 @@
 ﻿<!-- Top Header Start -->
-        <div class="top-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <div class="logo">
-                            <a href="">
-                                <img src="../../img/Selfy-Logo.png" alt="Selfy-Logo">
-                            </a>
+<div class="top-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <div class="logo">
+                    <a href="">
+                        <img src="../../img/Selfy-Logo.png" alt="Selfy-Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="search">
+                    <input type="text" placeholder="Ara">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="user">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hesabım</a>
+                        <div class="dropdown-menu">
+                            <a asp-controller="Account" asp-action="Login" class="dropdown-item">Giriş Yap</a>
+                            <a asp-controller="Account" asp-action="Register" class="dropdown-item">Kayıt Ol</a>
+                            <a asp-controller="Account" asp-action="Profile" class="dropdown-item">Profil</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="search">
-                            <input type="text" placeholder="Ara">
-                            <button><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="user">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hesabım</a>
-                                <div class="dropdown-menu">
-                                    <a asp-controller="Account" asp-action="Login" class="dropdown-item">Giriş Yap</a>
-                                    <a asp-controller="Account" asp-action="Register" class="dropdown-item">Kayıt Ol</a>
-                                </div>
-                            </div>
-                            <div class="cart">
-                                <i class="fa fa-cart-plus"></i>
-                                <span>(0)</span>
-                            </div>
-                        </div>
+
+                    <div class="cart">
+                        <i class="fa fa-cart-plus"></i>
+                        <span>(0)</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Top Header End -->
-        
-        
-        <!-- Header Start -->
-        <div class="header">
-            <div class="container">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand">MENU</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    </div>
+</div>
+<!-- Top Header End -->
+<!-- Header Start -->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav m-auto">
-                            <a asp-controller="Home" asp-action="Indexs" class="nav-item nav-link active">Ana Sayfa</a>
-                            <a href="product-list.html" class="nav-item nav-link">Hakkımızda</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hizmetler</a>
-                                <div class="dropdown-menu">
-                                    <a href="product-list.html" class="dropdown-item">Bulaşık Makinesi Teknik Servis</a>
-                                    <a href="product-list.html" class="dropdown-item">Buzdolabı Teknik Servis</a>
-                                    <a href="product-list.html" class="dropdown-item">Çamaşır Makinesi Teknik Servis</a>
-                                    <a href="product-list.html" class="dropdown-item">Fırın Teknik Servis</a>                           
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Randevu Al</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav m-auto">
+                    <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Ana Sayfa</a>
+                    <a href="product-list.html" class="nav-item nav-link">Hakkımızda</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hizmetler</a>
+                        <div class="dropdown-menu">
+                            <a href="product-list.html" class="dropdown-item">Bulaşık Makinesi Teknik Servis</a>
+                            <a href="product-list.html" class="dropdown-item">Buzdolabı Teknik Servis</a>
+                            <a href="product-list.html" class="dropdown-item">Çamaşır Makinesi Teknik Servis</a>
+                            <a href="product-list.html" class="dropdown-item">Fırın Teknik Servis</a>
                         </div>
                     </div>
-                </nav>
+                    <a href="contact.html" class="nav-item nav-link">Randevu Al</a>
+                </div>
             </div>
-        </div>
+        </nav>
+    </div>
+</div>

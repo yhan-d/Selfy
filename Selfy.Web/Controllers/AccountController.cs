@@ -305,7 +305,8 @@ namespace Selfy.Web.Controllers
                     Email = user.Email,
                     Name = user.Name,
                     Surname = user.Surname,
-                    RegisterDate = user.RegisterDate
+                    RegisterDate = user.RegisterDate,
+                    Phone = user.PhoneNumber
                 }
             };
 
@@ -333,7 +334,7 @@ namespace Selfy.Web.Controllers
             }
 
             var isAdmin = await _userManager.IsInRoleAsync(user, Roles.Admin);
-            if (user.Email != model.UserProfileVM.Email && !isAdmin)
+            if (user.Email != model.UserProfileVM?.Email && !isAdmin)
             {
                 await _userManager.RemoveFromRoleAsync(user, Roles.User);
                 await _userManager.AddToRoleAsync(user, Roles.Passive);
@@ -361,11 +362,18 @@ namespace Selfy.Web.Controllers
                 await _emailService.SendMailAsync(emailMessage);
             }
 
+            if (model.UserProfileVM != null)
+            {
+                user.Name = model.UserProfileVM.Name;
+                user.Surname = model.UserProfileVM.Surname;
+                user.Email = model.UserProfileVM.Email;
+                //user.UserName = model.UserProfileVM.UserName;
+            }
+            if(model.ChangePasswordVM != null)
+            {
+                await _userManager.ChangePasswordAsync(user, model.ChangePasswordVM.CurrentPassword, model.ChangePasswordVM.NewPassword);
+            }
 
-            user.Name = model.UserProfileVM.Name;
-            user.Surname = model.UserProfileVM.Surname;
-            user.Email = model.UserProfileVM.Email;
-            //user.UserName = model.UserProfileVM.UserName;
 
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
@@ -424,6 +432,8 @@ namespace Selfy.Web.Controllers
         {
             return View();
         }
+
+       
         
     }
 }

@@ -1,96 +1,137 @@
-﻿    
-        <!-- My Account Start -->
-        <div class="my-account">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab">Talepler</a>
-                            <a class="nav-link" id="address-nav" data-toggle="pill" href="#address-tab" role="tab">Adres</a>
-                            <a class="nav-link" id="account-nav" data-toggle="pill" href="#account-tab" role="tab">Hesap Bilgileri</a>
-                            <a class="nav-link" href="index.html">Çıkış</a>
+﻿@using Selfy.Core.Identity
+@using Selfy.Web.ViewModels
+@model UpdateProfilePasswordViewModel
+<!-- My Account Start -->
+<div class="my-account">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab">Talepler</a>
+                    <a class="nav-link" id="address-nav" data-toggle="pill" href="#address-tab" role="tab">Adres</a>
+                    <a class="nav-link" id="account-nav" data-toggle="pill" href="#account-tab" role="tab">Hesap Bilgileri</a>
+                    <a class="nav-link" href="index.html">Çıkış</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+
+                    <div class="tab-pane fade" id="orders-tab" role="tabpanel" aria-labelledby="orders-nav">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Hizmet</th>
+                                        <th>Tarih</th>
+                                        <th>Fiyat</th>
+                                        <th>Durum</th>
+                                        <th>Detay</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <div class="tab-content">
+                    <div class="text-center text-sm-right">
+                        @if (Context.User.IsInRole(Roles.Admin))
+                        {
+                            <span class="badge badge-success">Administrator</span>
+                        }
+                        else if (Context.User.IsInRole(Roles.User))
+                        {
+                            <span class="badge badge-primary">User</span>
+                        }
+                        else if (Context.User.IsInRole(Roles.Passive))
+                        {
+                            <span class="badge badge-warning">Passive</span>
 
-                            <div class="tab-pane fade" id="orders-tab" role="tabpanel" aria-labelledby="orders-nav">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Hizmet</th>
-                                                <th>Tarih</th>
-                                                <th>Fiyat</th>
-                                                <th>Durum</th>
-                                                <th>Detay</th>
-                                            </tr>
-                                        </thead>                                
-                                    </table>
+                            <br />
+                            <small class="text text-warning">Please confirm your email address</small>
+                        }
+                        <div class="text-muted"><small>Joined @Model.UserProfileVM.RegisterDate.ToShortDateString() </small></div>
+                    </div>
+                    <form asp-controller="Account" asp-action="Profile">
+                        <div asp-validation-summary="All"></div>
+                        <div class="tab-pane fade" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
+                            <h4>Adres</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Fatura Adresi</h5>
+                                    <input class="form-control" type="text" placeholder="Fatura Adresi">
+                                    <button type="submit" asp-controller="Account" asp-action="Profile" class="btn">Düzenle</button>
                                 </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
-                                <h4>Adres</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Fatura Adresi</h5>
-                                        <input class="form-control" type="text" placeholder="Fatura Adresi">
-                                        <button>Düzenle</button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5>Hizmet Adresi</h5>
-                                        <input class="form-control" type="text" placeholder="Hizmet Adresi">
-                                        <button>Düzenle</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="account-tab" role="tabpanel" aria-labelledby="account-nav">
-                                <h4>Hesap Bilgileri</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Ad">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Soyad">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Telefon Numarası">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="E-mail">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Adres">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button>Güncelle</button>
-                                        <br><br>
-                                    </div>
-                                </div>
-                                <h4>Şifre Değişikliği</h4>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="password" placeholder="Mevcut Şifre">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Yeni Şifre">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Yeni Şifre Tekrar">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button>Kaydet</button>
-                                    </div>
+                                <div class="col-md-6">
+                                    <h5>Hizmet Adresi</h5>
+                                    <input class="form-control" type="text" placeholder="Hizmet Adresi">
+                                    <button type="submit" asp-controller="Account" asp-action="Profile" class="btn">Düzenle</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="tab-pane fade" id="account-tab" role="tabpanel" aria-labelledby="account-nav">
+                            <h4>Hesap Bilgileri</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" asp-for="UserProfileVM.Name" placeholder="Ad">
+                                    <span class="text text-danger" asp-validation-for="UserProfileVM.Name"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" asp-for="UserProfileVM.Surname" placeholder="Soyad">
+                                    <span class="text text-danger" asp-validation-for="UserProfileVM.Surname"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" asp-for="UserProfileVM.Phone" placeholder="Telefon">
+                                    <span class="text text-danger" asp-validation-for="UserProfileVM.Phone"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" asp-for="UserProfileVM.Email" placeholder="Email">
+                                    <span class="text text-danger" asp-validation-for="UserProfileVM.Email"></span>
+                                </div>
+                                <input type="hidden" asp-for="UserProfileVM.UserName" />
+                                <div class="col-md-12">
+                                    <button type="submit" asp-controller="Account" asp-action="Profile" class="btn">Güncelle</button>
+                                    <br><br>
+                                </div>
+                            </div>
+                    </form>
+                    <h4>Şifre Değişikliği</h4>
+                    <form class="form" asp-controller="Account" asp-action="ChangePassword">
+                        <input type="hidden" class="form-control" asp-for="UserProfileVM.Name" placeholder="Ad">
+                        <input type="hidden" class="form-control" asp-for="UserProfileVM.Surname" placeholder="Soyad">
+                        <input type="hidden" class="form-control" asp-for="UserProfileVM.Phone" placeholder="Telefon">
+                        <input type="hidden" class="form-control" asp-for="UserProfileVM.Email" placeholder="Email">
+                        <input type="hidden" asp-for="UserProfileVM.UserName" />
+
+                        <div class="row">
+                            @if (TempData["PassSuccess"] != null)
+                            {
+                                <div class="text text-success">@TempData["PassSuccess"]</div>
+                            }
+                            else if (TempData["PassError"] != null)
+                            {
+                                <div class="text text-danger">@TempData["PassError"]</div>
+                            }
+                            <div class="col-md-12">
+                                <label class="form-label">Mevcut Şifre</label>
+                                <input class="form-control" asp-for="ChangePasswordVM.CurrentPassword" placeholder="••••••">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Yeni Şifre</label>
+                                <input class="form-control" asp-for="ChangePasswordVM.NewPassword" placeholder="••••••">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Yeni Şifre</label>
+                                <input class="form-control" asp-for="ChangePasswordVM.NewPasswordConfirm" placeholder="••••••">
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" asp-controller="Account" asp-action="Profile" class="btn">Değişiklikleri Kaydet</button>
+                            </div>
+
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
-        <!-- My Account End -->
-        
-        
-       
+    </div>
+</div>
+<!-- My Account End -->
