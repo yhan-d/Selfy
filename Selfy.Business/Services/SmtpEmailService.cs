@@ -14,6 +14,14 @@ namespace Selfy.Business.Services
         public SmtpEmailService(IConfiguration configuration)
         {
             _configuration = configuration;
+            var conf = _configuration.GetSection("GmailSettings");
+            this.EmailSettings = new EmailSettings
+            {
+                SenderMail = conf["SenderMail"],
+                Password = conf["Password"],
+                Smtp = conf["Smtp"],
+                SmtpPort = Convert.ToInt32(conf["SmtpPort"])
+            };
             //this.EmailSettings = _configuration.GetSection("GmailSettings").Get<EmailSettings>();
         }
         public EmailSettings EmailSettings { get; }

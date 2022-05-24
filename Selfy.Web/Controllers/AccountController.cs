@@ -69,7 +69,11 @@ namespace Selfy.Web.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Bir hata oluştu");
+                foreach (var item in result.Errors.Select(x => x.Description))
+                {
+                    ModelState.AddModelError(string.Empty, item + "<br>");
+                }
+                
                 return View(model);
             }
 
