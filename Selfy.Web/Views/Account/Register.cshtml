@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Selfy.Web.ViewModels
+@model RegisterViewModel
+<!DOCTYPE html>
 <html lang="tr" dir="ltr">
 
 <body>
@@ -18,55 +20,57 @@
         <div class="container">
             <div class="section-header">
                 <h3>Kayıt Ol</h3>
-
             </div>
             <div class="row">
-
-
                 <div class="col-md-12">
-                    <div class="register-form">
-                        <div class="row">
+                    <form asp-controller="Account" asp-action="Register">
+                        <div class="register-form">
+                            <div class="row">
 
-                            <div class="col-md-4">
-                                <label>Kullanıcı Adı</label>
-                                <input class="form-control" type="text" placeholder="Kullanıcı Adı">
-                            </div>
+                                <div class="col-md-4">
+                                    <label>Kullanıcı Adı</label>
+                                    <input class="form-control" asp-for="UserName" placeholder="Kullanıcı Adı">
+                                    <span class="text text-danger" asp-validation-for="UserName"></span>
+                                </div>
 
-                            <div class="col-md-4">
-                                <label>Ad</label>
-                                <input class="form-control" type="text" placeholder="Ad">
-                            </div>  
-                            <div class="col-md-4">
-                                <label>Soyad</label>
-                                <input class="form-control" type="text" placeholder="Soyad">
-                            </div>
-                            <div class="col-md-6">
-                                <label>E-mail</label>
-                                <input class="form-control" type="text" placeholder="E-mail">
-                            </div>
-                            <div class="col-md-6">
-                                <label>Telefon Numarası</label>
-                                <input class="form-control" type="text" placeholder="Telefon Numarası">
-                            </div>
-                            <div class="col-md-6">
-                                <label>Şifre</label>
-                                <input class="form-control" type="password" placeholder="Şifre">
-                            </div>
+                                <div class="col-md-4">
+                                    <label>Ad</label>
+                                    <input class="form-control" asp-for="Name" placeholder="Ad">
+                                    <span class="text text-danger" asp-validation-for="Name"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Soyad</label>
+                                   <input class="form-control" asp-for="Surname" placeholder="Soyad">
+                                    <span class="text text-danger" asp-validation-for="Surname"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>E-mail</label>
+                                    <input class="form-control" asp-for="Email" placeholder="Email">
+                                    <span class="text text-danger" asp-validation-for="Email"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Telefon Numarası</label>
+                                    <input class="form-control" asp-for="Phone" placeholder="Telefon No">
+                                    <span class="text text-danger" asp-validation-for="Phone"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Şifre</label>
+                                    <input class="form-control" asp-for="Password" placeholder="Şifre">
+                                    <span class="text text-danger" asp-validation-for="Password"></span>
+                                </div>
 
-                            <div class="col-md-6">
-                                <label>Şifre Tekrar</label>
-                                <input class="form-control" type="password" placeholder="Şifre Tekrar">
-                            </div>
-                            <div class="col-md-12">
-                                <label>Adres</label>
-                                <input class="form-control" type="text" placeholder="Adres">
-                            </div>
-                            <div class="col-md-12">
-                                
-                                <button class="btn">Kayıt ol</button>
+                                <div class="col-md-6">
+                                    <label>Şifre Tekrar</label>
+                                    <input class="form-control" asp-for="ConfirmPassword" placeholder="Şifre Tekrar">
+                                    <span class="text text-danger" asp-validation-for="ConfirmPassword"></span>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" asp-controller="Account" asp-action="Register" class="btn">Kayıt ol</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
                 </div>
             </div>
         </div>

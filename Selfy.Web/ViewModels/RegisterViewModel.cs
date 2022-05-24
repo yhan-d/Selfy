@@ -22,6 +22,13 @@ public class RegisterViewModel
     [Required(ErrorMessage = "E-Posta alanı gereklidir.")]
     public string Email { get; set; }
 
+    [Display(Name = "Telefon No")]
+    [Required(ErrorMessage = "Telefon alanı gereklidir.")]
+    [StringLength(10, MinimumLength=10, ErrorMessage = "En fazla 10 karakter giriniz.")]
+    [DataType(DataType.PhoneNumber)]
+    [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Geçersiz Numara.")]
+    public string Phone { get; set; }
+
     [Display(Name = "Şifre")]
     [Required(ErrorMessage = "Şifre alanı gereklidir.")]
     [StringLength(100, MinimumLength = 6, ErrorMessage = "Şifreniz minimum 6 karakterli olmalıdır!")]

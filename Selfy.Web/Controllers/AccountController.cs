@@ -61,7 +61,8 @@ namespace Selfy.Web.Controllers
                 UserName = model.UserName,
                 Email = model.Email,
                 Name = model.Name,
-                Surname = model.Surname
+                Surname = model.Surname,
+                PhoneNumber = model.Phone
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
