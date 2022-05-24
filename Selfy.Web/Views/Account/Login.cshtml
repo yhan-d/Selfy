@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Selfy.Web.ViewModels
+@model LoginViewModel
+<!DOCTYPE html>
 <html lang="tr" dir="ltr">
 <head>
 
@@ -25,27 +27,38 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="login-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>E-mail / Kullanıcı Adı</label>
-                                <input class="form-control" type="text" placeholder="E-mail / Kullanıcı Adı">
-                            </div>
-                            <div class="col-md-6">
-                                <label>Şifre</label>
-                                <input class="form-control" type="password" placeholder="Şifre">
-                            </div>
-                            <div class="col-md-12">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="newaccount">
-                                    <label class="custom-control-label" for="newaccount">Beni Hatırla</label>
+                    <form asp-controller="Account" asp-action="Login">
+                        <div asp-validation-summary="All"></div>
+                        <div class="login-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>E-mail / Kullanıcı Adı</label>
+                                    <input class="form-control" asp-for="UserName" placeholder="Kullanıcı Adı">
+                                    <span class="text text-danger" asp-validation-for="UserName"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Şifre</label>
+                                    <input class="form-control" asp-for="Password" placeholder="Şifre">
+                                    <span class="text text-danger" asp-validation-for="Password"></span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <label class="custom-control custom-checkbox">
+                                            <input asp-for="RememberMe" class="custom-control-input">
+                                            <span class="custom-control-label">Beni Hatırla</span>
+                                            <span class="text text-danger" asp-validation-for="RememberMe"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" asp-controller="Account" asp-action="Login" class="btn">Giriş</button>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <button class="btn">Giriş</button>
-                            </div>
                         </div>
-                    </div>
+
+
+                    </form>
+
                 </div>
             </div>
         </div>
