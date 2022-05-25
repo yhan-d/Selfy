@@ -10,7 +10,7 @@
                     <a class="nav-link" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab">Talepler</a>
                     <a class="nav-link" id="address-nav" data-toggle="pill" href="#address-tab" role="tab">Adres</a>
                     <a class="nav-link" id="account-nav" data-toggle="pill" href="#account-tab" role="tab">Hesap Bilgileri</a>
-                    <a class="nav-link" href="index.html">Çıkış</a>
+                    <a class="nav-link" asp-controller="Account" asp-action="Logout">Çıkış</a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -125,10 +125,8 @@
                             <div class="col-md-12">
                                 <button type="submit" asp-controller="Account" asp-action="Profile" class="btn">Değişiklikleri Kaydet</button>
                             </div>
-
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
