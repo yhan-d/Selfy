@@ -16,22 +16,31 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="user">
+                @if (Context.User.Identity.IsAuthenticated)
+                {
+                    <div class="user">
                     <div class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hesabım</a>
                         <div class="dropdown-menu">
-                            <a asp-controller="Account" asp-action="Login" class="dropdown-item">Giriş Yap</a>
-                            <a asp-controller="Account" asp-action="Register" class="dropdown-item">Kayıt Ol</a>
                             <a asp-controller="Account" asp-action="Profile" class="dropdown-item">Profil</a>
                             <a asp-controller="Account" asp-action="Logout" class="dropdown-item">Çıkış</a>
                         </div>
-                    </div>
-
-                    <div class="cart">
-                        <i class="fa fa-cart-plus"></i>
-                        <span>(0)</span>
-                    </div>
+                    </div
                 </div>
+                }
+                else
+                {
+                    <div class="user">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Giriş Yap</a>
+                        <div class="dropdown-menu">
+                            <a asp-controller="Account" asp-action="Login" class="dropdown-item">Giriş Yap</a>
+                            <a asp-controller="Account" asp-action="Register" class="dropdown-item">Kayıt Ol</a>
+                        </div>
+                    </div
+                </div>
+                }
+
             </div>
         </div>
     </div>
