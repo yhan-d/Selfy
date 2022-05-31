@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-3">
                 <div class="logo">
-                    <a href="">
+                    <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">
                         <img src="../../img/Selfy-Logo.png" alt="Selfy-Logo">
                     </a>
                 </div>
@@ -58,7 +58,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav m-auto">
                     <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Ana Sayfa</a>
-                    <a href="product-list.html" class="nav-item nav-link">Hakkımızda</a>
+                    <a asp-controller="Home" asp-action="About" class="nav-item nav-link active">Hakkımızda</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hizmetler</a>
                         <div class="dropdown-menu">
