@@ -1,1 +1,91 @@
-﻿
+﻿@using Selfy.Web.ViewModels
+@model RequestViewModel;
+
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+        
+        
+        <!-- Checkout Start -->
+        <div class="checkout">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="billing-address">
+                            <h2>Talep</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Adı</label>
+                                    <input class="form-control" type="text" placeholder="Adı">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Soyadı</label>
+                                    <input class="form-control" type="text" placeholder="Soyadı">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>E-mail</label>
+                                    <input class="form-control" type="text" placeholder="E-mail">
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <label>Talep</label>
+                                   @*<input class="form-control" type="text" placeholder="Talebinizi giriniz.">*@ 
+                                   <textarea class="form-control" rows="5" placeholder="Talebinizi giriniz" style="height: 123px;"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Kategori</label>
+                                    <select class="custom-select">
+                                        <option selected="">Tıklayınız</option>
+                                        <option>Buzdolabı</option>
+                                        <option>Çamaşır Makinesi</option>
+                                        <option>Bulaşık Makinesi</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Marka</label>
+                                    <select class="custom-select">
+                                        <option selected="">Tıklayınız</option>
+                                        <option>Arçelik</option>
+                                        <option>Bosch</option>
+                                        <option>Vestel</option>
+                                    </select>
+                                </div>
+                                
+                                
+                                
+                                <div class="col-md-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="newaccount">
+                                        <label class="custom-control-label" for="newaccount">Create an account</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5"> <h5>HARİTA</h5>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    Harita Resmi
+                                </div>
+                                 <div class="col-md-12">
+                                    <label>Adres</label>
+                                   @*<input class="form-control" type="text" placeholder="Talebinizi giriniz.">*@ 
+                                   <textarea class="form-control" rows="5" placeholder="Adresinizi giriniz" style="height: 123px;"></textarea>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-2">
+                         <button class="btn">Talep Oluştur</button>
+                    </div>
+                </div>
+            </div>
+        </div>
