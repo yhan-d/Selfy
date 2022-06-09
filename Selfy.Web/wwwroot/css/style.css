@@ -751,7 +751,7 @@ button.btn {
 
 .product-detail .product-slider-single img {
     width: 100%;
-    background: #3F69AA;
+    background: #fff0f5;
 }
 
 .product-detail .product-content,
@@ -765,24 +765,24 @@ button.btn {
     width: 100%;
 }
 
-.product-detail .product-content .title h2 {
-    color: #3F69AA;
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
+    .product-detail .product-content .title h2 {
+        color: #0000;
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+        
+    .product-detail .product-content .ratting i {
+        color: #fff0f5;
+        font-size: 18px;
+    }
 
-.product-detail .product-content .ratting i {
-    color: #3F69AA;
-    font-size: 18px;
-}
-
-.product-detail .product-content .price {
-    color: #3F69AA;
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
+    .product-detail .product-content .price {
+        color: #fff0f5;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
 
 .product-detail .product-content .price span {
     color: #666666;
