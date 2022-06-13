@@ -27,7 +27,19 @@ namespace Selfy.Web.Controllers
         {
             return View();
         }
-        public IActionResult Services()
+        public IActionResult DishwasherServices()
+        {
+            return View();
+        }
+        public IActionResult WashingMachineServices()
+        {
+            return View();
+        }
+        public IActionResult FridgeServices()
+        {
+            return View();
+        }
+        public IActionResult OvenServices()
         {
             return View();
         }
