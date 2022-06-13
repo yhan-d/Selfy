@@ -846,26 +846,26 @@ button.btn {
     border: 1px solid #3F69AA;
 }
 
-.product-detail .product-content .action a:hover {
-    color: #cc0404;
-    background: #ffffff;
-}
+    .product-detail .product-content .action a:hover {
+        color: #ce96a7;
+        background: #ffffff;
+    }
 
-.product-detail  .nav.nav-pills .nav-link {
-    color: #ffffff;
-    background: rgba(63, 105, 170, .5);
-    border-radius: 0;
-}
+    .product-detail .nav.nav-pills .nav-link {
+        color: #ffffff;
+        background: #ce96a7 /*3e68a9*/;
+        border-radius: 0;
+    }
 
-.product-detail  .nav.nav-pills .nav-link:hover,
-.product-detail  .nav.nav-pills .nav-link.active {
-    color: #ffffff;
-    background: #3F69AA;
-}
+        .product-detail .nav.nav-pills .nav-link:hover,
+        .product-detail .nav.nav-pills .nav-link.active {
+            color: #ffffff;
+            background: #cc0404;
+        }
 
-.product-detail .tab-content {
-    background: rgba(63, 105, 170, .1);
-}
+    .product-detail .tab-content {
+        background: #ce96a7;
+    }
 
 .product-detail .tab-content {
     padding: 10px;
@@ -947,7 +947,50 @@ button.btn {
     color: #ffffff;
     background: #3F69AA;
 }
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #ce96a7;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ce96a7;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
 
+.btn-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+body {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: #fff0f5;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;  
+    background-color: #ce96a7;
+    background-clip: border-box;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+}
 
 
 /**********************************/
