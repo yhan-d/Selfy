@@ -2,9 +2,9 @@
 
 namespace Selfy.Core.Entities;
 
-public class Category : BaseEntity<int>
+public class Product : BaseEntity<int>
 {
     public string Name { get; set; }
 
-    public IList<Brand>? Brands { get; set; }
+    public IList<Request>? Requests { get; set; }
 }

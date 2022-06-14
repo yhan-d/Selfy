@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Selfy.Business.Services;
 using Selfy.Data.EntityFramework;
 using Selfy.Data.Identity;
+using System.Security.Claims;
 
 namespace Selfy.Web.Extensions
 {
@@ -58,6 +60,23 @@ namespace Selfy.Web.Extensions
             //});
 
             return services;
+        }
+
+        public static string GetUserId(this HttpContext context)
+        {
+            return context.User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value;
+        }
+        public static string ToFullErrorString(this ModelStateDictionary modelState)
+        {
+            var messages = new List<string>();
+
+            foreach (var entry in modelState.Values)
+            {
+                foreach (var error in entry.Errors)
+                    messages.Add(error.ErrorMessage);
+            }
+
+            return String.Join(" ", messages);
         }
     }
 }
