@@ -433,11 +433,7 @@ namespace Selfy.Web.Controllers
             return View();
         }
 
-       [HttpGet, Authorize]
-       public async Task<IActionResult> RequestText(RequestViewModel model)
-        {
-            return View();
-        }
+      
 
 
     }
