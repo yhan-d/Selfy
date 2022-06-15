@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="product-content">
-                                <div class="title"><h2>Buzdolabı Teknik Servisi</h2></div>
+                                <div class="title"><h2 align="center" > <b> Buzdolabı <br />Teknik Servisi</b> </h2></div>
                                 <div class="details">
                                     <div style="text-align: justify;">
                                         <p>
@@ -38,10 +38,43 @@
                                         </p>
                                     </div>
                                 </div>
-
-
-
                             </div>
+                                                  <div class="frame">
+                    @*<button asp-controller="Home" asp-action="Appoinment" class="custom-btn btn-9">TALEP OLUŞTUR</button>*@
+                    
+        <div asp-controller="Home" asp-action="Appoinment" class="button" onclick="document.body.classList.add('active')">
+            <span text-align: "center" class="button-text">TALEP OLUŞTUR</span> </> 
+            <div class="button-backgrounds">
+                <div class="button-circle button-circle1"></div>
+                <div class="button-circle button-circle2"></div>
+                <div class="button-circle button-circle3"></div>
+                <div class="button-circle button-circle4"></div>
+            </div>
+        </div>
+   
+
+    <div class="wrapper">
+        <div class="popup">
+            <div class="popup-inside">
+                <div class="backgrounds">
+                    <div class="background"></div>
+                    <div class="background background2"></div>
+                    <div class="background background3"></div>
+                    <div class="background background4"></div>
+                    <div class="background background5"></div>
+                    <div class="background background6"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-wrapper">
+                    <h1>well done</h1>
+                    <p>Do you like it?</p>
+                    <p class="try-again" onclick="document.body.classList.remove('active')">Yes! I will try again</p>
+                </div>
+            </div>
+        </div>
+    </div>
+                    </div>
                         </div>
                     </div>
 
