@@ -58,8 +58,211 @@ h6 {
         padding-top: 12px;
         color: #cc0404;
     }
+/**********************************/
+/********* Appoinment CSS *********/
+/**********************************/
+li,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.sec-title {
+    position: relative;
+    padding-bottom: 40px;
+}
 
+    .sec-title .title {
+        position: relative;
+        color: #00b8ca;
+        font-size: 18px;
+        font-weight: 700;
+        padding-right: 50px;
+        margin-bottom: 15px;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+
+        .sec-title .title:before {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 7px;
+            width: 40px;
+            height: 1px;
+            background-color: #bbb;
+        }
+
+    .sec-title h2 {
+        position: relative;
+        color: #252525;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.5em;
+        display: block;
+    }
+
+    .sec-title.light h2 {
+        color: #fff;
+    }
+
+.appointment-section {
+    position: relative;
+    padding: 31px 0 80px;
+}
+
+    .appointment-section .form-column {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+.default-form {
+    position: relative;
+}
+
+    .default-form .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .default-form .form-group i {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #00b8ca;
+            font-size: 18px;
+        }
+
+        .default-form .form-group input[type="text"],
+        .default-form .form-group input[type="tel"],
+        .default-form .form-group input[type="email"],
+        .default-form .form-group select {
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 28px;
+            padding: 10px 20px;
+            color: #000;
+            height: 50px;
+            font-size: 13px;
+            background: #fff;
+            border: 1px solid #d7d7d7;
+            -webkit-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+            .default-form .form-group input[type="text"]:focus,
+            .default-form .form-group input[type="tel"]:focus,
+            .default-form .form-group input[type="email"]:focus,
+            .default-form .form-group textarea:focus {
+                border-color: #00b8ca;
+            }
+
+        .default-form .form-group textarea {
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 22px;
+            padding: 15px 20px;
+            color: #797979;
+            height: 120px;
+            background: #fff;
+            resize: none;
+            font-size: 14px;
+            border: 1px solid #d7d7d7;
+            -webkit-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .default-form .form-group .appointment-btn {
+            position: relative;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 11px 30px;
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #cc0404;
+            border: 1px solid #cc0404;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .default-form .form-group .btn-detail {
+            position: relative;
+            color: #777;
+            font-size: 15px;
+            margin-left: 35px;
+            display: inline-block;
+        }
+
+.appointment-section .schedule-column {
+    position: relative;
+}
+
+    .appointment-section .schedule-column .inner-outer {
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+        .appointment-section .schedule-column .inner-outer:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 347px;
+            height: 268px;
+            background: url(https://i.ibb.co/gjZ1NFM/pattern-Appoinment.png) no-repeat;
+        }
+
+    .appointment-section .schedule-column .inner-column {
+        position: relative;
+        padding: 25px 30px;
+        border: 2px solid #cc0404;
+        background-color: #fff;
+    }
+
+    .appointment-section .schedule-column h2 {
+        position: relative;
+        color: #252525;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .appointment-section .schedule-column .time-list {
+        position: relative;
+    }
+
+        .appointment-section .schedule-column .time-list li {
+            position: relative;
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+            .appointment-section .schedule-column .time-list li:last-child {
+                margin-bottom: 0;
+            }
+
+            .appointment-section .schedule-column .time-list li strong {
+                color: #222;
+                font-weight: 700;
+            }
+
+        .appointment-section .schedule-column .time-list .closed {
+            position: relative;
+            color: #00b8ca;
+        }
 
 /**********************************/
 /********* Form Input CSS *********/
@@ -1057,8 +1260,8 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -80px;
-    margin-left: -20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /**********************************/
@@ -1080,21 +1283,6 @@ button {
     background: linear-gradient(to right, #e1e0ff, #d7fadd);
 }
 
-
-h1 {
-    padding-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 16px;
-}
-
-p {
-    padding-bottom: 15px;
-}
-
-    p:last-of-type {
-        padding-bottom: 0;
-    }
 
 .try-again {
     cursor: pointer;
@@ -1224,7 +1412,7 @@ p {
     width: 400px;
     flex-shrink: 0;
     border-radius: 3px;
-    position: relative;
+    position: center;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -1367,6 +1555,233 @@ body.active .background {
 body.active .background6 {
     transform: scale(8);
 }
+
+/**********************************/
+/********** Pop Up Button CSS ***********/
+/**********************************/
+
+
+
+#body_header {
+    width: auto;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: auto;
+    outline: 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: black;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+    label.light {
+        font-weight: 300;
+        display: inline;
+    }
+
+.number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+}
+
+
+
+form {
+    max-width: 480px;
+}
+
+
+/**********************************/
+/********** Sidebar CSS ***********/
+/**********************************/
+.sidebar-widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+    .sidebar-widget:last-child {
+        margin-bottom: 0;
+    }
+
+    .sidebar-widget .title {
+        position: relative;
+        color: #3F69AA;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+        .sidebar-widget .title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            left: calc(50% - 25px);
+            bottom: 0;
+            background: #3F69AA;
+        }
+
+    .sidebar-widget.brands ul,
+    .sidebar-widget.category ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .sidebar-widget.brands ul li,
+        .sidebar-widget.category ul li {
+            margin-bottom: 12px;
+        }
+
+            .sidebar-widget.brands ul li:last-child,
+            .sidebar-widget.category ul li:last-child {
+                margin-bottom: 0;
+            }
+
+            .sidebar-widget.brands ul li a,
+            .sidebar-widget.category ul li a {
+                color: #3F69AA;
+                font-size: 16px;
+                font-weight: 400;
+                white-space: nowrap;
+                display: inline-block;
+                line-height: 23px;
+            }
+
+                .sidebar-widget.brands ul li a::before,
+                .sidebar-widget.category ul li a::before {
+                    content: '\f061';
+                    font-family: 'FontAwesome';
+                    padding-right: 5px;
+                }
+
+                .sidebar-widget.brands ul li a:hover,
+                .sidebar-widget.category ul li a:hover {
+                    padding-left: 10px;
+                }
+
+            .sidebar-widget.brands ul li span,
+            .sidebar-widget.category ul li span {
+                display: inline-block;
+                float: right;
+                color: #666666;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+    .sidebar-widget.image a {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sidebar-widget.image img {
+        max-width: 100%;
+        transition: .3s;
+    }
+
+        .sidebar-widget.image img:hover {
+            transform: scale(1.1);
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+    .sidebar-widget.tag a {
+        display: inline-block;
+        margin: 0 0 4px 0;
+        padding: 3px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #3F69AA;
+        background: #ffffff;
+        border: 1px solid #3F69AA;
+    }
+
+        .sidebar-widget.tag a:hover {
+            color: #ffffff;
+            background: #3F69AA;
+        }
+
+
+
 
 /**********************************/
 /********** Sidebar CSS ***********/

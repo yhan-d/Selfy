@@ -12,8 +12,8 @@ using Selfy.Data.EntityFramework;
 namespace Selfy.Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20220615081310_Scenario_5")]
-    partial class Scenario_5
+    [Migration("20220615090202_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
