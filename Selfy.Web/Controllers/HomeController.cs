@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Selfy.Core.Identity;
 using Selfy.Data.Identity;
@@ -40,6 +41,11 @@ namespace Selfy.Web.Controllers
             return View();
         }
         public IActionResult OvenServices()
+        {
+            return View();
+        }
+
+        public IActionResult Appoinment()
         {
             return View();
         }
