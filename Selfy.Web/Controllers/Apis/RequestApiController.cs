@@ -9,6 +9,5 @@ namespace Selfy.Web.Controllers.Apis
     public class RequestApiController : BaseApiController
     {
         private readonly IMapper _mapper;
-        
     }
 }
