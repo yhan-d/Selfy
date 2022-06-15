@@ -58,7 +58,17 @@ namespace Selfy.Data.EntityFramework
                 entity.HasOne(x => x.Product)
               .WithMany(x => x.Requests)
               .HasForeignKey(x => x.ProductId);
+                entity.HasOne(x => x.Operation)
+                    .WithOne(y => y.Request)
+                    .HasForeignKey<Operation>(x => x.RequestId);
+            });
 
+            builder.Entity<Operation>(entity =>
+            {
+                entity.Property(x => x.UserId);
+                entity.HasOne(x => x.Request)
+                    .WithOne(x => x.Operation)
+                    .HasForeignKey<Operation>(x => x.RequestId);
             });
 
 
@@ -66,6 +76,7 @@ namespace Selfy.Data.EntityFramework
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Request> Requests { get; set; }
+        public DbSet<Operation> Operations { get; set; }
 
 
     }
